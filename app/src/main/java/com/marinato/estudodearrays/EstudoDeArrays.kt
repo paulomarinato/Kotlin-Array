@@ -1,22 +1,13 @@
 package com.marinato.estudodearrays
 
 fun main() {
+    val salarios = doubleArrayOf((1500.50, 2300.0, 5000.0, 8000.0, 10000.0)
 
-    val idades = intArrayOf(25, 19, 33, 20, 55, 40)
-
-    var maiorIdade = 0
-    for (idade in idades) {
-        if (idade > maiorIdade) {
-            maiorIdade = idade
-        }
+    val aumento = 1.1
+    var indice = 0
+    for (salario in salarios) {
+        salarios[0] = salario * aumento
+        indice++
     }
-
-    println(maiorIdade)
-
-    var menorIdade = Int.MAX_VALUE
-    idades.forEach { idade ->
-        if (idade < menorIdade) {
-            menorIdade = idade
-        }
-    }
+    println(salarios.contentToString())
 }
